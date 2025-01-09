@@ -1,0 +1,32 @@
+<style>
+    .chat-icon {
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    .chat-icon img {
+        width: 90px; 
+        height: 90px;
+    }
+</style>
+</head>
+<body>
+<div class="chat-icon" onclick="openChat()">
+    <img src="url image for chat icon" alt="Chat Icon">    
+</div>
+
+ <script>
+    function openChat() {
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        if (isMobile) {
+            window.location.href = 'https://m.me/xxxxxxx'; //Replace xxxxxxx with your page id
+        } else {
+            window.open('https://m.me/xxxxxxx', '_blank');
+        }
+    }
+</script>
